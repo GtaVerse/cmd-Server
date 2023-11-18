@@ -1,4 +1,4 @@
-#include "../include/Command.h"
+#include <Command.h>
 
 Command::Command(const char* cmd, std::queue<const char*> args) : cmd(cmd, args) { }
 

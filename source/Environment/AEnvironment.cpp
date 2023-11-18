@@ -1,4 +1,4 @@
-#include "../include/Environment/AEnvironment.h"
+#include <Environment/AEnvironment.h>
 
 AEnvironment::AEnvironment(const char* env_name, const env_type& default_value)
 {

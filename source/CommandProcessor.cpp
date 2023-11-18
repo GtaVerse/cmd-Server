@@ -1,4 +1,4 @@
-#include "../include/CommandProcessor.h"
+#include <CommandProcessor.h>
 
 void CommandProcessor::addCommand(const Command &cmd) {
     commands.push_back(cmd);

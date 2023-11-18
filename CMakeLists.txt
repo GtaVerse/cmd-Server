@@ -22,4 +22,5 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
 add_executable(YT-Cut-Server ${SRCS})
 
-target_compile_options(YT-Cut-Server PRIVATE ${CXXFLAGS})
+target_include_directories(YT-Cut-Server PRIVATE ${INCDIR})
+target_compile_options(YT-Cut-Server PRIVATE ${CXXFLAGS} -I${INCDIR})
