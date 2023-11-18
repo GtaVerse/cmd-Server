@@ -19,6 +19,10 @@ struct st_commandResult {
 class CommandProcessor {
 
     public:
+        CommandProcessor() = default;
+        ~CommandProcessor() = default;
+        CommandProcessor(CommandProcessor&& other) = default;
+
         void addCommand(const Command& cmd);
         bool delCommand(const char* cmd);
         std::unique_ptr<st_commandResult> executeCommand();
