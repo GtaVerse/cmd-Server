@@ -1,9 +1,11 @@
 #pragma once
 
-#include "AEnvironment.h"
 
-class ENV_CSPORT : public AEnvironment<unsigned short>
+#include <Environment/AEnvironment.h>
+
+class ENV_CSPORT : public AEnvironment<int>
 {
-    public:
-        ENV_CSPORT();
+public:
+    ENV_CSPORT();
 };
+
