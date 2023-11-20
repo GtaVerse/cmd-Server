@@ -3,6 +3,7 @@
 
 #include "include/Command.h"
 #include "include/CommandProcessor.h"
+#include "include/Server.h"
 
 #define RELEASE 0
 

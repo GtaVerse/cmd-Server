@@ -19,6 +19,7 @@ set(SRCS
         main.cpp
         ${SRCDIR}/Command.cpp
         ${SRCDIR}/CommandProcessor.cpp
+        ${SRCDIR}/Server.cpp
         ${SRCDIR}/Environment/ENV.CSPORT.cpp
         ${SRCDIR}/Environment/ENV.CSOUTFILE.cpp
 )
