@@ -1,6 +1,7 @@
 #include <Server.h>
 
 Server::Server() : AConfigFile("config.ini"),
+                onClientEvent(nullptr),
                 SERVER_PORT(env_port.getEnvValue()),
                 SERVER_OUTFILE(env_outfile.getEnvValue()),
                 CLIENT_HOST(file["SERVER"]["client_host"].as<const char*>()),
@@ -63,7 +64,7 @@ void Server::start() {
                         continue;
                     }
 
-                    this->OnClientConnect(client_fd);
+                   this->OnClientEvent(CLIENT_CONNECT, client_fd);
                 }
                 else
                 {
@@ -71,12 +72,12 @@ void Server::start() {
                     int len = read(fd, buffer, sizeof(buffer));
 
                     if(len == 0)
-                        this->OnClientDisconnect(fd);
+                        this->OnClientEvent(CLIENT_DISCONNECT, fd);
                     else if(len == 10)
                         this->clients[fd].addMessage(buffer);
                     else {
                         buffer[len] = '\0';
-                        this->OnClientMessage(fd, buffer);
+                        this->OnClientEvent(CLIENT_MESSAGE, fd, buffer);
                     }
                 }
             }
@@ -86,10 +87,37 @@ void Server::start() {
 
 }
 
+void Server::OnClientEvent(int event, ...) {
+
+    int fd;
+    va_list arg;
+    va_start(arg, event);
+
+    switch(static_cast<E_CLIENT_EVENT>(event)) {
+        case CLIENT_CONNECT:
+            fd = va_arg(arg, int);
+            this->OnClientConnect(fd);
+            break;
+        case CLIENT_DISCONNECT:
+            fd = va_arg(arg, int);
+            this->OnClientDisconnect(fd);
+            break;
+        case CLIENT_MESSAGE:
+            fd = va_arg(arg, int);
+            const char* msg = va_arg(arg, const char*);
+            this->OnClientMessage(fd, msg);
+            break;
+    }
+
+    va_end(arg);
+}
+
 void Server::OnClientConnect(int fd) {
     FD_SET(fd, &this->sockets);
     fcntl(fd, F_SETFL, O_NONBLOCK);
     this->addClient(fd);
+    if(this->onClientEvent != nullptr)
+        this->onClientEvent(CLIENT_CONNECT, fd);
 }
 
 void Server::OnClientDisconnect(int fd) {
@@ -100,7 +128,8 @@ void Server::OnClientDisconnect(int fd) {
 
 void Server::OnClientMessage(int fd, const char* msg) {
     this->clients[fd].addMessage(msg);
-    std::cout << "Client FD: " << fd << " Message Length: " << this->clients[fd].getMessage().length() << " " << this->clients[fd].getMessage() << std::endl;
+    if(this->onClientEvent != nullptr)
+        this->onClientEvent(CLIENT_MESSAGE, fd, this->clients[fd].getMessage().c_str());
     this->clients[fd].clearMessage();
 }
 
@@ -109,6 +138,8 @@ Server& Server::addClient(int fd) {
     std::cout << "Client FD: " << fd << " connected" << std::endl;
     if(fd > this->max_fd)
         this->max_fd = fd;
+    if(this->onClientEvent != nullptr)
+        this->onClientEvent(CLIENT_DISCONNECT, fd);
     return *this;
 }
 
