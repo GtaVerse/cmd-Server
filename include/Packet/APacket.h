@@ -1,8 +1,19 @@
-//
-// Created by Gorkem on 23.11.2023.
-//
+#ifndef APACKET_H_
+#define APACKET_H_
 
-#ifndef YT_CUT_SERVER_APACKET_H
-#define YT_CUT_SERVER_APACKET_H
+#include "Packet.h"
+#include <Utility.h>
 
-#endif //YT_CUT_SERVER_APACKET_H
+class APacket {
+
+    public:
+        APacket(E_PACKET type);
+        virtual ~APacket() = default;
+        virtual void unpack(const char* data) = 0;
+
+        const E_PACKET type;
+
+
+};
+
+#endif

@@ -34,9 +34,15 @@ int main()
     //auto res = cmdProc.executeCommand();
     //std::cout << res->output << std::endl;
 
-    Server server;
-    server.onClientEvent = OnEvent;
-    server.start();
+    //Server server;
+    //server.onClientEvent = OnEvent;
+    //server.start();
+
+    auto res = std::move(Utility::str_split("Hello World", ' '));
+    for(auto& str : res)
+    {
+        std::cout << str << std::endl;
+    }
 
 
 }

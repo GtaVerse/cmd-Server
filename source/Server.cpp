@@ -14,7 +14,6 @@ Server::Server() : AConfigFile("config.ini"),
     if((this->server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
         throw std::runtime_error("Server: socket failed");
 
-    LOG("Server: socket created");
     memset(&serverAddr, 0, sizeof(serverAddr));
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(this->SERVER_PORT);

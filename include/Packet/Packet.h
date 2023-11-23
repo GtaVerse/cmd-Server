@@ -1,8 +1,8 @@
-//
-// Created by Gorkem on 23.11.2023.
-//
+#ifndef PACKET_H_
+#define PACKET_H_
 
-#ifndef YT_CUT_SERVER_PACKET_H
-#define YT_CUT_SERVER_PACKET_H
+enum E_PACKET {
+    PACKET_COMMAND,
+};
 
-#endif //YT_CUT_SERVER_PACKET_H
+#endif

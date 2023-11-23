@@ -1,8 +1,23 @@
-//
-// Created by Gorkem on 23.11.2023.
-//
+#ifndef COMMANDPACKET_H_
+#define COMMANDPACKET_H_
 
-#ifndef YT_CUT_SERVER_COMMANDPACKET_H
-#define YT_CUT_SERVER_COMMANDPACKET_H
+#include "APacket.h"
+#include <queue>
 
-#endif //YT_CUT_SERVER_COMMANDPACKET_H
+class CommandPacket : public APacket {
+
+    public:
+        CommandPacket(const char* data);
+        ~CommandPacket() = default;
+        CommandPacket& unpack(const char* data) override;
+
+        const std::string& getCommand() const;
+        const std::string& getArgs() const;
+
+    private:
+        std::string command;
+        std::queue<std::string> args;
+
+};
+
+#include "APacket.h"

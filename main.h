@@ -4,6 +4,7 @@
 #include "include/Command.h"
 #include "include/CommandProcessor.h"
 #include "include/Server.h"
+#include "Utility/Utility.h"
 
 
 #endif

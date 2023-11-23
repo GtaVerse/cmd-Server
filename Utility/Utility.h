@@ -2,7 +2,7 @@
 #define UTILITY_H_
 
 #include <vector>
-#include <memory>
+#include <string>
 
 class Utility {
 
@@ -25,10 +25,6 @@ class Utility {
 
             return result;
         }
-
-
-
-
 };
 
 
