@@ -15,6 +15,7 @@ int main()
     std::cout << res->output << std::endl;
 
     Server server;
+    server.start();
 
 
 }

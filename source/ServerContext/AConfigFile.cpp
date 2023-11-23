@@ -9,6 +9,7 @@ AConfigFile::AConfigFile(const char* CONFIG_PATH) {
         this->file["SERVER"]["client_host"] = "";
         this->file["SERVER"]["LOG"] = false;
         this->file["SERVER"]["LOG_PATH"] = "logs/";
+        this->file["SERVER"]["MAX_CONNECTION"] = 5;
         this->file.save(CONFIG_PATH);
     }
 }
