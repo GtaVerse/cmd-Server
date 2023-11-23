@@ -7,14 +7,14 @@ Server::Server() : AConfigFile("config.ini"),
                 CLIENT_HOST(file["SERVER"]["client_host"].as<const char*>()),
                 LOGGING(file["SERVER"]["LOG"].as<bool>()),
                 LOG_PATH(file["SERVER"]["LOG_PATH"].as<const char*>()),
-                MAX_CONNECTION(file["SERVER"]["MAX_CONNECTION"].as<int>())
+                MAX_CONNECTION(file["SERVER"]["MAX_CONNECTION"].as<int>()),
                 MAX_MESSAGE(file["SERVER"]["MAX_MESSAGE"].as<int>())
                 {
     struct sockaddr_in serverAddr;
-
     if((this->server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
         throw std::runtime_error("Server: socket failed");
 
+    LOG("Server: socket created");
     memset(&serverAddr, 0, sizeof(serverAddr));
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(this->SERVER_PORT);

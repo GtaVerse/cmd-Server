@@ -25,14 +25,14 @@ void OnEvent(int event, ...)
 int main()
 {
 
-    std::queue<const char*> args = queue<const char*>();
-    args.push("-a");
+    //std::queue<const char*> args = queue<const char*>();
+    //args.push("-a");
 
-    Command cmd = Command("/bin/ls", args);
-    CommandProcessor cmdProc = CommandProcessor();
-    cmdProc.addCommand(cmd);
-    auto res = cmdProc.executeCommand();
-    std::cout << res->output << std::endl;
+    //Command cmd = Command("/bin/ls", args);
+    //CommandProcessor cmdProc = CommandProcessor();
+    //cmdProc.addCommand(cmd);
+    //auto res = cmdProc.executeCommand();
+    //std::cout << res->output << std::endl;
 
     Server server;
     server.onClientEvent = OnEvent;
