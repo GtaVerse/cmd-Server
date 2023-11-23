@@ -1,0 +1,8 @@
+//
+// Created by Gorkem on 23.11.2023.
+//
+
+#ifndef YT_CUT_SERVER_COMMANDPACKET_H
+#define YT_CUT_SERVER_COMMANDPACKET_H
+
+#endif //YT_CUT_SERVER_COMMANDPACKET_H
