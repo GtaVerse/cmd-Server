@@ -8,6 +8,7 @@ Server::Server() : AConfigFile("config.ini"),
                 LOGGING(file["SERVER"]["LOG"].as<bool>()),
                 LOG_PATH(file["SERVER"]["LOG_PATH"].as<const char*>()),
                 MAX_CONNECTION(file["SERVER"]["MAX_CONNECTION"].as<int>())
+                MAX_MESSAGE(file["SERVER"]["MAX_MESSAGE"].as<int>())
                 {
     struct sockaddr_in serverAddr;
 
@@ -47,10 +48,8 @@ void Server::start() {
         {
             this->read_fd = this->sockets;
             int ret = select(this->max_fd + 1, &this->read_fd, NULL, NULL, NULL);
-            if(ret < 0) {
-                //std::cout << "select failed" << std::endl;
+            if(ret < 0)
                 continue;
-            }
             if(FD_ISSET(fd, &this->read_fd))
             {
                 if(fd == this->server_fd)
@@ -68,14 +67,15 @@ void Server::start() {
                 }
                 else
                 {
-                    char buffer[10];
+                    char buffer[this->MAX_MESSAGE + 1];
                     int len = read(fd, buffer, sizeof(buffer));
 
                     if(len == 0)
                         this->OnClientEvent(CLIENT_DISCONNECT, fd);
                     else if(len == 10)
                         this->clients[fd].addMessage(buffer);
-                    else {
+                    else
+                    {
                         buffer[len] = '\0';
                         this->OnClientEvent(CLIENT_MESSAGE, fd, buffer);
                     }
@@ -135,7 +135,6 @@ void Server::OnClientMessage(int fd, const char* msg) {
 
 Server& Server::addClient(int fd) {
     this->clients.insert(std::make_pair(fd, Client(fd)));
-    std::cout << "Client FD: " << fd << " connected" << std::endl;
     if(fd > this->max_fd)
         this->max_fd = fd;
     if(this->onClientEvent != nullptr)

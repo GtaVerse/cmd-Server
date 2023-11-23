@@ -33,6 +33,7 @@ class Server : public AConfig, public AConfigFile {
         const bool LOGGING;
         const char* LOG_PATH;
         const int MAX_CONNECTION;
+        const int MAX_MESSAGE;
 
         using EVENT = void (*)(int, ...);
         EVENT onClientEvent;
