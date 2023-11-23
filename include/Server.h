@@ -43,11 +43,10 @@ class Server : public AConfig, public AConfigFile {
         Server& removeClient(int fd);
 
 
-        void OnClientEvent(int event, ...);
-
-        void OnClientConnect(int client_fd);
-        void OnClientDisconnect(int client_fd);
-        void OnClientMessage(int client_fd, const char* msg);
+        inline void OnClientEvent(int event, ...);
+        inline void OnClientConnect(int client_fd);
+        inline void OnClientDisconnect(int client_fd);
+        inline void OnClientMessage(int client_fd, const char* msg);
 
         int server_fd;
         fd_set sockets, read_fd;
