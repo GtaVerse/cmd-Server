@@ -3,6 +3,7 @@
 
 void OnEvent(int event, ...)
 {
+
     va_list args;
     va_start(args, event);
 
@@ -38,11 +39,12 @@ int main()
     //server.onClientEvent = OnEvent;
     //server.start();
 
+
+
     auto res = std::move(Utility::str_split("Hello World", ' '));
     for(auto& str : res)
     {
         std::cout << str << std::endl;
     }
-
 
 }

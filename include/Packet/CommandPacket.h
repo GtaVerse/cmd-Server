@@ -20,4 +20,4 @@ class CommandPacket : public APacket {
 
 };
 
-#include "APacket.h"
+#endif

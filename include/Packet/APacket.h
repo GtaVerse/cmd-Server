@@ -9,7 +9,7 @@ class APacket {
     public:
         APacket(E_PACKET type);
         virtual ~APacket() = default;
-        virtual void unpack(const char* data) = 0;
+        virtual APacket& unpack(const char* data) = 0;
 
         const E_PACKET type;
 
