@@ -74,8 +74,10 @@ void Server::start() {
 
                     if(len == 0)
                         this->OnClientEvent(CLIENT_DISCONNECT, fd);
-                    else if(len == this->MAX_MESSAGE)
+                    else if(len == this->MAX_MESSAGE) {
+                        buffer[len] = '\0';
                         this->clients[fd].addMessage(buffer);
+                    }
                     else
                     {
                         buffer[len] = '\0';
