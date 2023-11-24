@@ -19,8 +19,10 @@ Server::Server() : AConfigFile("config.ini"),
     serverAddr.sin_port = htons(this->SERVER_PORT);
     serverAddr.sin_addr.s_addr = strlen(this->CLIENT_HOST) == 0 ? INADDR_ANY : inet_addr(this->CLIENT_HOST);
 
-    int opt = 1;
-    setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, (char *)&opt, sizeof(opt));
+    #if !RELEASE
+        int opt = 1;
+        setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, (char *)&opt, sizeof(opt));
+    #endif
 
     if(bind(server_fd, (struct sockaddr *)&serverAddr, sizeof(serverAddr)) < 0)
         throw std::runtime_error("Server: bind failed");
