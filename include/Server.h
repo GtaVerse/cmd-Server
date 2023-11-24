@@ -9,6 +9,7 @@
 #include <utility>
 #include <CS.h>
 #include <Client.h>
+#include <PacketProcessor.h>
 #include <ServerContext/AConfig.h>
 #include <ServerContext/AConfigFile.h>
 
@@ -54,6 +55,9 @@ class Server : public AConfig, public AConfigFile {
         int max_fd;
 
         std::map<int, Client> clients;
+
+        // Packet
+        PacketProcessor packetProcessor;
 };
 
 

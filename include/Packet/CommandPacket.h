@@ -9,7 +9,7 @@ class CommandPacket : public APacket {
     public:
         CommandPacket(const char* data);
         ~CommandPacket() = default;
-        CommandPacket& unpack(const char* data) override;
+        CommandPacket& unpack(const std::vector<std::string>& data) override;
 
         const std::string& getCommand() const;
         const std::string& getArgs() const;

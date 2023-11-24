@@ -5,6 +5,7 @@
 
 #if RELEASE
     #include <iostream>
+    #include <cstdio>
     using namespace std;
 #endif
 
@@ -15,6 +16,12 @@
         }
 #else
     #define LOG(msg) { }
+#endif
+
+#if RELEASE == 0
+    #define LOGF(...) { printf(__VA_ARGS__); }
+    #else
+        #define LOGF(...) { }
 #endif
 
 #endif

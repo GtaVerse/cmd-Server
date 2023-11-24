@@ -43,6 +43,7 @@ void Server::start() {
 
     while(true)
     {
+        this->packetProcessor.process();
         for(int fd = 0; fd <= this->max_fd; fd++)
         {
             this->read_fd = this->sockets;
@@ -71,11 +72,12 @@ void Server::start() {
 
                     if(len == 0)
                         this->OnClientEvent(CLIENT_DISCONNECT, fd);
-                    else if(len == 10)
+                    else if(len == this->MAX_MESSAGE)
                         this->clients[fd].addMessage(buffer);
                     else
                     {
                         buffer[len] = '\0';
+                        this->clients[fd].addMessage(buffer);
                         this->OnClientEvent(CLIENT_MESSAGE, fd, buffer);
                     }
                 }
@@ -126,7 +128,12 @@ void Server::OnClientDisconnect(int fd) {
 }
 
 void Server::OnClientMessage(int fd, const char* msg) {
-    this->clients[fd].addMessage(msg);
+
+    LOGF("Incoming data from client %d: %s", fd, msg);
+    auto res = this->packetProcessor.unpack(msg);
+    if(res != nullptr)
+        this->packetProcessor.addPacket(res);
+
     if(this->onClientEvent != nullptr)
         this->onClientEvent(CLIENT_MESSAGE, fd, this->clients[fd].getMessage().c_str());
     this->clients[fd].clearMessage();

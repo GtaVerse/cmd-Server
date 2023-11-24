@@ -1,6 +1,7 @@
 #ifndef PACKET_PROCESSOR_H_
 #define PACKET_PROCESSOR_H_
 
+#include <iostream>
 #include <set>
 #include <Utility.h>
 #include <Packet/CommandPacket.h>
@@ -11,7 +12,9 @@ class PacketProcessor {
         PacketProcessor();
         ~PacketProcessor() = default;
 
+        void process();
         std::unique_ptr<APacket> unpack(const char* data);
+        void addPacket(std::unique_ptr<APacket>& packet);
 
         class PacketProcessorException : public std::exception {
             public:
@@ -22,9 +25,10 @@ class PacketProcessor {
         };
 
     private:
-        inline E_PACKET getType(const char* id);
+        inline E_PACKET getType(const char* id) const;
 
         std::set<E_PACKET> packet_types;
+        std::queue<std::unique_ptr<APacket>> packets;
 };
 
 #endif
