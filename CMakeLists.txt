@@ -27,6 +27,7 @@ set(SRCS
         ${SRCDIR}/ServerContext/AConfigFile.cpp
         ${SRCDIR}/Packet/APacket.cpp
         ${SRCDIR}/Packet/CommandPacket.cpp
+        ${SRCDIR}/Packet/Consumer/CommandPacket.Consumer.cpp
 )
 
 set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)

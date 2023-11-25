@@ -3,16 +3,16 @@
 
 #include <Packet/Packet.h>
 #include <Utility.h>
+#include <CS.h>
 
 class APacket {
 
     public:
-        APacket(E_PACKET type);
-        virtual ~APacket() = default;
-        virtual APacket& unpack(const std::vector<std::string>& data) = 0;
-
         const E_PACKET type;
+        virtual ~APacket();
 
+    protected:
+        APacket(E_PACKET type);
 
 };
 

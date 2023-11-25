@@ -16,6 +16,8 @@ class PacketProcessor {
         std::unique_ptr<APacket> unpack(const char* data);
         void addPacket(std::unique_ptr<APacket>& packet);
 
+        void consumer(const CommandPacket& packet);
+
         class PacketProcessorException : public std::exception {
             public:
                 PacketProcessorException(const char* msg) : msg(msg) {}

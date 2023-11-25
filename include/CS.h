@@ -22,6 +22,12 @@
     #define LOGF(...) { printf(__VA_ARGS__); }
     #else
         #define LOGF(...) { }
+    #endif
+
+#if RELEASE == 0
+    #define LOGFD(...) { LOGF("%s:%s:%d: ", __FILE_NAME__, __FUNCTION__, __LINE__); LOGF(__VA_ARGS__); }
+#else
+    #define LOGFD(...) { }
 #endif
 
 #endif
