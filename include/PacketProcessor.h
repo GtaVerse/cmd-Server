@@ -2,6 +2,7 @@
 #define PACKET_PROCESSOR_H_
 
 #include <iostream>
+#include <queue>
 #include <set>
 #include <Utility.h>
 #include <Packet/CommandPacket.h>

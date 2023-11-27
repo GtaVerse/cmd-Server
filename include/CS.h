@@ -3,7 +3,8 @@
 
 #define RELEASE 0
 
-#if RELEASE == 0
+//Fix
+#if RELEASE == 1
     #include <iostream>
     #include <cstdio>
     using namespace std;

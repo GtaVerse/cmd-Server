@@ -2,7 +2,7 @@
 #define COMMANDPACKET_H_
 
 #include "APacket.h"
-#include <queue>
+#include <list>
 
 class CommandPacket : public APacket {
 
@@ -11,11 +11,11 @@ class CommandPacket : public APacket {
         ~CommandPacket() = default;
 
         const std::string& getCommand() const;
-        const std::string& getArgs() const;
+        const std::list<std::string>& getArgs() const;
 
     private:
         std::string command;
-        std::queue<std::string> args;
+        std::list<std::string> args;
 
 };
 
