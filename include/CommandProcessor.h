@@ -22,7 +22,7 @@ class CommandProcessor {
         ~CommandProcessor() = default;
         CommandProcessor(CommandProcessor&& other) = default;
 
-        std::unique_ptr<st_commandResult> runCommand(Command cmd);
+        std::unique_ptr<st_commandResult> runCommand(const Command& cmd) const;
 
 };
 

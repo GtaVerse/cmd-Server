@@ -4,8 +4,8 @@
 void PacketProcessor::consumer(const CommandPacket& packet)
 {
     LOGFD("PacketProcessor: Consuming CommandPacket\n");
-    Command command(packet.getCommand(), packet.getArgs());
-    auto res = this->command_processor.runCommand(command);
+    const Command command(packet.getCommand(), packet.getArgs());
+    auto res = PacketProcessor::command_processor.runCommand(command);
 
     std::cout << "Output: " << res.get()->output << std::endl;
 

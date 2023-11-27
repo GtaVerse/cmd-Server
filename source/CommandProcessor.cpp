@@ -1,8 +1,6 @@
 #include <CommandProcessor.h>
 
-#include <iostream>
-
-std::unique_ptr<st_commandResult> CommandProcessor::runCommand(Command cmd) {
+std::unique_ptr<st_commandResult> CommandProcessor::runCommand(const Command& cmd) const {
 
 
     int pipefd[2];

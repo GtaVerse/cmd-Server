@@ -1,5 +1,7 @@
 #include "../include/PacketProcessor.h"
 
+const CommandProcessor PacketProcessor::command_processor;
+
 PacketProcessor::PacketProcessor()
 {
     packet_types.insert(E_PACKET::PACKET_COMMAND);

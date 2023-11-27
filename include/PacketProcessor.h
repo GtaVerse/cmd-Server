@@ -34,8 +34,7 @@ class PacketProcessor {
         std::set<E_PACKET> packet_types;
         std::queue<std::unique_ptr<APacket>> packets;
 
-        //static
-        CommandProcessor command_processor;
+        static const CommandProcessor command_processor;
 };
 
 #endif
