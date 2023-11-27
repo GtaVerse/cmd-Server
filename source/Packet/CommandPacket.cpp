@@ -5,13 +5,14 @@ CommandPacket::CommandPacket(const std::vector<std::string>& data) : APacket(E_P
     auto end = data.end();
     this->command = *begin;
     for(++begin; begin != end; ++begin)
-        this->args.push_back(*begin);
+        this->args.push_back(begin->c_str());
+    this->args.push_back(nullptr);
 }
 
 const std::string& CommandPacket::getCommand() const {
     return this->command;
 }
 
-const std::list<std::string>& CommandPacket::getArgs() const {
+const std::list<const char*>& CommandPacket::getArgs() const {
     return this->args;
 }

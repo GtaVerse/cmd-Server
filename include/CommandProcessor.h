@@ -6,7 +6,6 @@
 #include <sys/wait.h>
 #include <unistd.h>
 #include <string>
-#include <vector>
 #include <memory>
 
 struct st_commandResult {
@@ -23,16 +22,8 @@ class CommandProcessor {
         ~CommandProcessor() = default;
         CommandProcessor(CommandProcessor&& other) = default;
 
-        void addCommand(const Command& cmd);
-        bool delCommand(const char* cmd);
-        std::unique_ptr<st_commandResult> executeCommand();
-        //void executeCommand(const char* cmd);
+        std::unique_ptr<st_commandResult> runCommand(Command cmd);
 
-    private:
-        inline int findCommandIndex(const char* cmd);
-        inline std::unique_ptr<st_commandResult> runCommand(const Command& cmd);
-
-        std::vector<Command> commands;
 };
 
 

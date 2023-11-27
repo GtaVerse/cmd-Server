@@ -1,36 +1,23 @@
 #ifndef COMMAND_H_
 #define COMMAND_H_
 
-#include <queue>
+#include <string.h>
+#include <list>
 
 struct st_cmd {
-    const char *cmd;
-    std::queue<const char*> args;
+    const std::string& cmd;
+    const std::list<const char*>& args;
 
-    st_cmd(const char* cmd, std::queue<const char*> args) {
-        this->cmd = cmd;
-        if(strcmp(cmd, args.front()) != 0) {
-            std::queue<const char*> new_args;
-            new_args.push(const_cast<char*>(cmd));
-            while(!args.empty()) {
-                new_args.push(args.front());
-                args.pop();
-            }
-            this->args = new_args;
-        }
-        if(args.back() != nullptr)
-            this->args.push(nullptr);
-
-    }
+    st_cmd(const std::string& cmd, const std::list<const char*>& args) : cmd(cmd), args(args) { }
 };
 
 class Command
 {
     public:
-        Command(const char* cmd, std::queue<const char*> args);
+        Command(const std::string& command, const std::list<const char*>& args);
         Command(const Command& other);
-        const char* getCmd() const;
-        const std::queue<const char*>& getArgs() const;
+        const std::string& getCmd() const;
+        const std::list<const char*>& getArgs() const;
         const st_cmd cmd;
 
 };
