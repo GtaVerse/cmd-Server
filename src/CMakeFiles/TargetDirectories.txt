@@ -1,0 +1,3 @@
+/Users/gorkem/Desktop/YT-Cut-Server/src/CMakeFiles/YT-Cut-Server.dir
+/Users/gorkem/Desktop/YT-Cut-Server/src/CMakeFiles/edit_cache.dir
+/Users/gorkem/Desktop/YT-Cut-Server/src/CMakeFiles/rebuild_cache.dir
