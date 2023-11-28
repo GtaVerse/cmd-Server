@@ -3,11 +3,11 @@
 
 #define RELEASE 0
 
-//Fix
-#if RELEASE == 1
+
+#if RELEASE == 0
     #include <iostream>
     #include <cstdio>
-    using namespace std;
+    //using namespace std;
 #endif
 
 #if RELEASE == 0
