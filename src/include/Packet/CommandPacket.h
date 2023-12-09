@@ -11,12 +11,10 @@ class CommandPacket : public APacket {
         ~CommandPacket() = default;
 
         const std::string& getCommand() const;
-        const std::list<const char*>& getArgs() const;
+        const std::list<std::string>& getArgs() const;
 
     private:
-        std::string command;
-        std::list<const char*> args;
-
+       stCommandPacket packet;
 };
 
 #endif

@@ -1,6 +1,6 @@
 CMakeFiles/YT-Cut-Server.dir/source/Server.cpp.o: \
-  /Users/gorkem/Desktop/YT-Cut-Server/source/Server.cpp \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Server.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/source/Server.cpp \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Server.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/arpa/inet.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/cdefs.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_symbol_aliasing.h \
@@ -759,26 +759,26 @@ CMakeFiles/YT-Cut-Server.dir/source/Server.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/CS.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Client.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/PacketProcessor.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/CS.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Client.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/PacketProcessor.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/set \
-  /Users/gorkem/Desktop/YT-Cut-Server/Utility/Utility.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/CommandProcessor.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Command.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/Utility/Utility.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/CommandProcessor.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Command.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Packet/CommandPacket.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Packet/APacket.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Packet/Packet.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/ServerContext/AConfig.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Environment/ENV.CSPORT.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Environment/AEnvironment.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Environment/ENV.CSOUTFILE.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/ServerContext/AConfigFile.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Packet/CommandPacket.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Packet/APacket.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Packet/Packet.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/ServerContext/AConfig.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Environment/ENV.CSPORT.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Environment/AEnvironment.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Environment/ENV.CSOUTFILE.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/ServerContext/AConfigFile.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/stat.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/ServerContext/../External/inicpp.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/ServerContext/../External/inicpp.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/copy_options.h \

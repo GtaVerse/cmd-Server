@@ -25,6 +25,16 @@ class Utility {
 
             return result;
         }
+
+        /*
+        * Summary:
+        * Removes the last character of a string if it is a newline character.
+        */
+        static void packet_clear_str(std::string& packet) {
+            auto last = packet.size() - 1;
+            if(packet[last] == '\n')
+                packet = packet.substr(0, last);
+        }
 };
 
 

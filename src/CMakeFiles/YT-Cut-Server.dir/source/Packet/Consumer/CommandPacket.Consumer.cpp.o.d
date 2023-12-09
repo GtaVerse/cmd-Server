@@ -1,6 +1,6 @@
 CMakeFiles/YT-Cut-Server.dir/source/Packet/Consumer/CommandPacket.Consumer.cpp.o: \
-  /Users/gorkem/Desktop/YT-Cut-Server/source/Packet/Consumer/CommandPacket.Consumer.cpp \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/PacketProcessor.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/source/Packet/Consumer/CommandPacket.Consumer.cpp \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/PacketProcessor.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
@@ -736,10 +736,11 @@ CMakeFiles/YT-Cut-Server.dir/source/Packet/Consumer/CommandPacket.Consumer.cpp.o
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
-  /Users/gorkem/Desktop/YT-Cut-Server/Utility/Utility.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/CommandProcessor.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Command.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/Utility/Utility.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/CommandProcessor.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Command.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/CS.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/unistd.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/unistd.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_posix_vdisable.h \
@@ -748,7 +749,6 @@ CMakeFiles/YT-Cut-Server.dir/source/Packet/Consumer/CommandPacket.Consumer.cpp.o
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_select.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_uuid_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/gethostuuid.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Packet/CommandPacket.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Packet/APacket.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Packet/Packet.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/CS.h
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Packet/CommandPacket.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Packet/APacket.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Packet/Packet.h

@@ -1,8 +1,8 @@
 CMakeFiles/YT-Cut-Server.dir/source/ServerContext/AConfig.cpp.o: \
-  /Users/gorkem/Desktop/YT-Cut-Server/source/ServerContext/AConfig.cpp \
-  /Users/gorkem/Desktop/YT-Cut-Server/source/ServerContext/../../include/ServerContext/AConfig.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Environment/ENV.CSPORT.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Environment/AEnvironment.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/source/ServerContext/AConfig.cpp \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/source/ServerContext/../../include/ServerContext/AConfig.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Environment/ENV.CSPORT.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Environment/AEnvironment.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cstdlib \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
@@ -677,4 +677,4 @@ CMakeFiles/YT-Cut-Server.dir/source/ServerContext/AConfig.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Environment/ENV.CSOUTFILE.h
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Environment/ENV.CSOUTFILE.h

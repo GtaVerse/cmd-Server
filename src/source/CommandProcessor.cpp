@@ -18,7 +18,7 @@ std::unique_ptr<st_commandResult> CommandProcessor::runCommand(const Command& cm
         dup2(pipefd[1], STDOUT_FILENO);
         //close(pipefd[0]);
 
-        if (execv(cmd.getCmd().c_str(), const_cast<char* const*>(&cmd.getArgs().front())) == -1)
+        if (execv(cmd.getCmd().c_str(), const_cast<char* const*>(cmd.getArgs().data())) == -1)
             exit(EXIT_FAILURE);
     } else
     {

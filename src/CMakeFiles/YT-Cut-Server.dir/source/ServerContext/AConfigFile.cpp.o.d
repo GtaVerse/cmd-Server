@@ -1,6 +1,6 @@
 CMakeFiles/YT-Cut-Server.dir/source/ServerContext/AConfigFile.cpp.o: \
-  /Users/gorkem/Desktop/YT-Cut-Server/source/ServerContext/AConfigFile.cpp \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/ServerContext/AConfigFile.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/source/ServerContext/AConfigFile.cpp \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/ServerContext/AConfigFile.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/stat.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/cdefs.h \
@@ -38,7 +38,7 @@ CMakeFiles/YT-Cut-Server.dir/source/ServerContext/AConfigFile.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_time_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_s_ifmt.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_filesec_t.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/ServerContext/../External/inicpp.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/ServerContext/../External/inicpp.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/algorithm \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \

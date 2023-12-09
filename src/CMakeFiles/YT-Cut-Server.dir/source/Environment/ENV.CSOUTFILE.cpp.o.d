@@ -1,7 +1,7 @@
 CMakeFiles/YT-Cut-Server.dir/source/Environment/ENV.CSOUTFILE.cpp.o: \
-  /Users/gorkem/Desktop/YT-Cut-Server/source/Environment/ENV.CSOUTFILE.cpp \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Environment/ENV.CSOUTFILE.h \
-  /Users/gorkem/Desktop/YT-Cut-Server/include/Environment/AEnvironment.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/source/Environment/ENV.CSOUTFILE.cpp \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Environment/ENV.CSOUTFILE.h \
+  /Users/gorkem/Desktop/YT-Cut-Server/src/include/Environment/AEnvironment.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/cstdlib \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \

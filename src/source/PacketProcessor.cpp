@@ -26,19 +26,18 @@ void PacketProcessor::process()
 
 std::unique_ptr<APacket> PacketProcessor::unpack(const char* data)
 {
-    auto packet = Utility::str_split(data, ' ');
+    auto packetInfo = Utility::str_split(data, ' ');
     try {
-        auto packet_type = getType(packet[0].c_str());
+        auto packet_type = getType(packetInfo[0].c_str());
 
         switch(packet_type)
         {
             case E_PACKET::PACKET_COMMAND:
-                return std::make_unique<CommandPacket>(packet);
+                return std::make_unique<CommandPacket>(packetInfo);
         }
     }
     catch(PacketProcessorException& e) {
         std::cout << e.what() << std::endl;
-        return nullptr;
     }
     return nullptr;
 }
