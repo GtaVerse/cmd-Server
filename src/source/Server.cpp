@@ -42,7 +42,6 @@ Server::Server() : AConfigFile("config.ini"),
 
 
 void Server::start() {
-
     while(true)
     {
         this->packetProcessor.process();
