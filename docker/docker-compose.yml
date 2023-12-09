@@ -1,0 +1,21 @@
+version: '3.8'
+
+volumes:
+  yt-server:
+    name: yt_volume
+    driver: local
+    driver_opts:
+        type: 'none'
+        o: 'bind'
+        device: ${HOME}/yt-server/output
+
+services:
+  yt-server:
+    container_name: yt-server
+    build: ../.
+    ports:
+      - "8090:8090"
+    volumes:
+      - yt-server:/app/output
+    environment:
+      - VIDEO_DURATION=10
